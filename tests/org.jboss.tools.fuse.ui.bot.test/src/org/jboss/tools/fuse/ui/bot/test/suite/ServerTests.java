@@ -3,6 +3,7 @@ package org.jboss.tools.fuse.ui.bot.test.suite;
 import junit.framework.TestSuite;
 
 import org.jboss.reddeer.junit.runner.RedDeerSuite;
+import org.jboss.tools.fuse.ui.bot.test.DataTransformationDeploymentTest;
 import org.jboss.tools.fuse.ui.bot.test.DeploymentTest;
 import org.jboss.tools.fuse.ui.bot.test.Fabric8Test;
 import org.jboss.tools.fuse.ui.bot.test.JMXNavigatorServerTest;
@@ -17,6 +18,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author tsedmik
  */
 @SuiteClasses({
+	DataTransformationDeploymentTest.class,
 	DeploymentTest.class,
 	Fabric8Test.class,
 	JMXNavigatorServerTest.class,
