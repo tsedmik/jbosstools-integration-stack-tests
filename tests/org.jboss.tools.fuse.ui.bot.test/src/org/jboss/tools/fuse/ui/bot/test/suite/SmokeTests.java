@@ -1,6 +1,7 @@
 package org.jboss.tools.fuse.ui.bot.test.suite;
 
 import org.jboss.reddeer.junit.runner.RedDeerSuite;
+import org.jboss.tools.fuse.ui.bot.test.JMXNavigatorTest;
 import org.jboss.tools.fuse.ui.bot.test.ProjectLocalRunTest;
 import org.jboss.tools.fuse.ui.bot.test.SmokeTest;
 import org.junit.runner.RunWith;
@@ -13,7 +14,7 @@ import junit.framework.TestSuite;
  * 
  * @author tsedmik
  */
-@SuiteClasses({ ProjectLocalRunTest.class, SmokeTest.class })
+@SuiteClasses({ ProjectLocalRunTest.class, SmokeTest.class, JMXNavigatorTest.class })
 @RunWith(RedDeerSuite.class)
 public class SmokeTests extends TestSuite {
 
