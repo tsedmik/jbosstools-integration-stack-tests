@@ -22,11 +22,17 @@ public class FuseJMXNavigator extends JMXNavigator {
 	public boolean suspendCamelContext(String... path) {
 		log.info("Trying to suspend Camel Context: " + path);
 		activate();
+		refreshNode("Local Camel Context");
 		try {
 			getNode(path).select();
+		} catch (Exception e) {
+			log.info("Cannot find the Camel Context!");
+			return false;
+		}
+		try {
 			new ContextMenu("Suspend Camel Context").select();
 		} catch (Exception e) {
-			log.info("Camel Context was not suspended!");
+			log.info("Cannot find context menu item 'Suspend Camel Context'!");
 			return false;
 		}
 		return true;
